@@ -62,3 +62,4 @@ jobs:
           slack-message: "GitHub build failed. 😞\n[Build URL](${{ github.event.head_commit.url }})"
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          runs-on: self-hosted
