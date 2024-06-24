@@ -41,7 +41,7 @@ jobs:
       - name: Push Docker image to Docker Hub
         env:
           IMAGE_NAME: test-image
-          USERNAME: monyslim
+          USERNAME: melvinsamuel070
         run: |
           docker push $USERNAME/$IMAGE_NAME:${{ env.APP_VERSION }}
 
