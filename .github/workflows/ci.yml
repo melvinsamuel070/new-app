@@ -33,7 +33,7 @@ jobs:
       - name: Build Docker image
         env:
           IMAGE_NAME: test-image
-          USERNAME: monyslim
+          USERNAME: melvinsamuel070
         run: |
           echo ${{ env.APP_VERSION }}
           docker build -t $USERNAME/$IMAGE_NAME:${{ env.APP_VERSION }} .
