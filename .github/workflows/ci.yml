@@ -66,16 +66,16 @@ jobs:
           slack-message: "GitHub build failed. 😞\n[Build URL](${{ github.event.head_commit.url }})"
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-  #      ## This action is to send email notification for the randomly generated app version numbers
-  #     - name: "Send email notification for the latest version of the deployment"
-  #       uses: dawidd6/action-send-mail@v3
-        # with:
-        #  username: prcenturionboy@gmail.com
-        #  password: ${{ secrets.EMAIL_PASSWORD }}
-        #  server_address: smtp.gmail.com
-        #  server_port: 465
-        #  secure: true
-         # subject: "New Docker Image release"
-         # to: "dewcapontaareh@gmail.com"
-         # from: "Admin_DevOps"
-         # body: "New image release version: ${{ env.APP_VERSION }}"   
+       ## This action is to send email notification for the randomly generated app version numbers
+      - name: "Send email notification for the latest version of the deployment"
+        uses: dawidd6/action-send-mail@v3
+        with:
+         username: melvinsamuel070@gmail.com
+         password: ${{ secrets.EMAIL_PASSWORD }}
+         server_address: smtp.gmail.com
+         server_port: 465
+         secure: true
+         subject: "New Docker Image release"
+         to: "melvinsamuel070@gmail.com"
+         from: "Admin_DevOps"
+         body: "New image release version: ${{ env.APP_VERSION }}"   
